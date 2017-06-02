@@ -227,7 +227,7 @@ Polymer.AppLocalizeBehavior = {
       // do extra work if we're just reusing strings across an application.
       var translatedValue = _.get(resources[language], key);
 
-      if (!translatedValue) {
+      if (!translatedValue || _.isObjectLike(translatedValue)) { // Not found or couldn't resolve to a leaf
         return this.useKeyIfMissing ? key : '';
       }
 
