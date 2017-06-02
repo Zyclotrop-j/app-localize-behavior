@@ -109,11 +109,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var app = fixture('complex');
 
         assert.equal(app.language, 'en');
-        assert.equal(app.$.output.innerHTML, 'hello');
+        assert.equal(app.$.doutput.innerHTML, 'hello');
 
         app.language = 'fr';
         assert.equal(app.language, 'fr');
-        assert.equal(app.$.output.innerHTML, 'bonjour');
+        assert.equal(app.$.doutput.innerHTML, 'bonjour');
       });
 
       test('can handle missing keys', function() {
