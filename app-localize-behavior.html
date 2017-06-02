@@ -11,6 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-ajax/iron-ajax.html">
 <script src="../intl-messageformat/dist/intl-messageformat.min.js"></script>
+<script src="../lodash/dist/lodash.min.js"></script>
 
 <script>
 
@@ -224,7 +225,7 @@ Polymer.AppLocalizeBehavior = {
 
       // Cache the key/value pairs for the same language, so that we don't
       // do extra work if we're just reusing strings across an application.
-      var translatedValue = resources[language][key];
+      var translatedValue = _.get(resources[language], key);
 
       if (!translatedValue) {
         return this.useKeyIfMissing ? key : '';
