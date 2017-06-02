@@ -1,10 +1,12 @@
 {
   "en": {
     "greeting": "hello",
+    "deep": { "greeting": "hello" },
     "intro": "my name is {name}. i have {numCats, number} cats."
   },
   "fr": {
     "greeting": "bonjour",
+    "deep": { "greeting": "bonjour" },
     "intro": "je m'apelle {name}. j'ai {numCats, number} chats."
   }
 }
